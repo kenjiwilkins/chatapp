@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>chat-app</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+
   </head>
   <body>
     <noscript>
@@ -13,5 +16,30 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
+
+    <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyD3W3ncJ9d1E0M6oFmH3wrwJA5Qzr_Vc-k",
+        authDomain: "mkw-chatbox.firebaseapp.com",
+        databaseURL: "https://mkw-chatbox.firebaseio.com",
+        projectId: "mkw-chatbox",
+        storageBucket: "mkw-chatbox.appspot.com",
+        messagingSenderId: "186981207058",
+        appId: "1:186981207058:web:30b1d36d13a25ab2569ccb",
+        measurementId: "G-287EE68Z5J"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
   </body>
 </html>

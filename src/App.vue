@@ -1,28 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id='app'>
+    <router-view />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  name: 'App',
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+  },
+
+  data(){
+    return {
+      loggedIn:false,
+      threads:[
+       {id:0,topicName:'Best Movie'},
+       {id:1,topicName:'News of 2019'},
+       {id:2,topicName:'Politics'}
+      ],
+      users:[
+        {id:0, name: "John Wick", online: true},
+        {id:1, name: "Ethan Hunt", online: false},
+        {id:2, name: "Brad Pitt", online: false}
+      ]
+    }
+  }
+};
+</script>
